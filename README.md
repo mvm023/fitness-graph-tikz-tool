@@ -19,3 +19,7 @@ The fitness graph is represented in layers:
 
 **Output:**\
 The TikZ code is printed to the console.
+
+## Example
+
+An example of a fitness graph consisting of 8 Boolean assignments of length 3 can be found in the example.py file.
