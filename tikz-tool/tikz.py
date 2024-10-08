@@ -1,5 +1,6 @@
 import numpy as np
 import networkx as nx
+from helper_functions import *
 
 def outputTikz(fitnessGraph, positioning="horizontal", ascents=[], restrictMutationsToPredSuc = False):
     tikz_code = "\\begin{tikzpicture}[->,>=stealth',shorten >=1pt,auto,node distance=2.5cm, semithick, draw=lightgray]\n"
@@ -95,12 +96,3 @@ def assignAscentColor(ascentType):
         case _:
             "black"
     return ascentColor
-
-
-def nextInterleavedInteger(k):  #Function that returns the next value in the canonical enumeration of interleaved integers (i.e. 0,1,-1,2,-2,3,-3,...)
-    if k == 0:
-        return 1
-    if k > 0:
-        return -k
-    if k < 0:
-        return abs(k)+1
